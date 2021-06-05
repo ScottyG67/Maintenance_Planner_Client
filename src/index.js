@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-// import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+document.addEventListener("DOMContentLoaded",()=>{
+  console.log("dom loaded")
+  insertWelcome()
+})
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+function insertWelcome() {
+  const root = document.getElementById("root")
+  let welcome = document.createElement('h2')
+  welcome.innerText="This was added in the Index.js file"
+  root.appendChild(welcome)
+}
